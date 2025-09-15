@@ -1,0 +1,286 @@
+/* ------- VARIABLES -------- */
+
+$primary:  #000000;
+
+$text-root: 1rem;  // 16px
+$text-1: 0.625rem; // 10px
+$text-2: 0.75rem; // 12px
+$text-3: 0.875rem; // 14px
+$text-4: 1rem; // 16px
+$text-5: 1.125rem; // 18px
+$text-6: 1.25rem; // 20px
+$text-7: 1.375rem; // 22px
+$text-8: 1.5rem; // 24px
+$text-9: 2rem; // 32px
+$text-10: 2.5rem; // 40px
+$text-11: 4rem; // 64px
+$text-12: 4.8125rem; // 77px
+
+@font-face {
+    font-family: '';
+    src: url(../);
+}
+
+
+/* ------- MAIN INFO -------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: "Poppins";
+    font-weight: 300;
+    color: #333;
+    font-size: 16px;
+    text-rendering: optimizeLegibility;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins";
+    font-weight: 300;
+    color: #333;
+    font-size: 16px;
+}
+
+
+/* ------- TITLES, TEXTS -------- */
+
+.text-1 {
+    font-size: $text-1;
+}
+
+.text-2 {
+    font-size: $text-2;
+}
+
+.text-3 {
+    font-size: $text-3;
+}
+
+.text-4 {
+    font-size: $text-4;
+}
+
+.text-5 {
+    font-size: $text-5;
+}
+
+.text-6 {
+    font-size: $text-6;
+}
+
+.text-7 {
+    font-size: $text-7;
+}
+
+.text-8 {
+    font-size: $text-8;
+}
+
+.text-9 {
+    font-size: $text-9;
+}
+
+.text-10 {
+    font-size: $text-10;
+}
+
+.text-11 {
+    font-size: $text-11;
+}
+
+.text-12 {
+    font-size: $text-12;
+}
+
+.fw-600 {
+    font-weight: 600;
+}
+
+.fw-200 {
+    font-weight: 200;
+}
+
+.text-black {
+    color: black;
+}
+
+
+/* ------- BACKGROUNDS -------- */
+
+.bg-neat {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.bg-white {
+    background-color: white;
+}
+  
+.bg-black {
+    background-color: black;
+}
+
+
+/* -----  BORDERS, SHADOWS AND OTHER  ----- */
+
+.hr-small {
+    border: 0px;
+    border-top: 2px solid black;
+    width: 100px;
+}
+
+
+/* ------- NAVBAR -------- */
+  
+.navbar-brand img {
+    width: 100px;
+}
+
+
+/* ------- HEADER -------- */
+
+header {
+    background: url(../img/hero-img.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 90vh; 
+}
+
+
+/* ------- FOOTER -------- */
+
+
+/* ------- BUTTONS -------- */
+
+.btn {
+    min-width: 150px;
+}
+
+.button-style-none {
+    border: none !important;
+    background: transparent !important;
+}
+
+button:active {
+    outline: none !important;
+    border: none !important;
+}
+  
+button:focus {
+    outline: 0 !important;
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0) !important;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+    user-select: none;
+}
+
+
+/* ------- FORMS -------- */
+
+::placeholder {
+    color: black !important;
+}
+  
+:-ms-input-placeholder {
+    color: black !important;
+}
+  
+::-ms-input-placeholder {
+    color: black !important;
+}
+
+/* ------- POSITIONING -------- */
+
+.anchor {
+    padding-top: 100px;
+    margin-top: -100px;
+}
+
+.my-sec {
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+.py-sec {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.z-1 {
+    z-index: 1;
+}
+
+.z-2 {
+    z-index: 2;
+}
+
+
+/* ------- ACTIONS -------- */
+
+.pointer {
+    cursor: pointer;
+}
+
+a,
+a:hover {
+    text-decoration: none;
+}
+
+
+/* ------- QUERIES -------- */
+
+// Small devices
+@media (min-width: 576px) {}
+
+// Medium devices
+@media (min-width: 768px) {
+    .w-md-50 {
+        width: 50%;
+    }
+}
+
+// Large devices
+@media (min-width: 992px) {
+    .container {
+        width: 78%;
+    }
+
+    .position-lg-absolute {
+        position: absolute;
+    }
+
+    .w-lg-50 {
+        width: 50%;
+    }
+
+    .w-lg-75 {
+        width: 75%;
+    }
+
+    .my-sec {
+        margin-top: 90px;
+        margin-bottom: 90px;
+    }
+    
+    .py-sec {
+        padding-top: 90px;
+        padding-bottom: 90px;
+    }
+}
+
+// Extra large devices
+@media (min-width: 1600px) {
+    .container {
+        width: 70%;
+    }
+}
