@@ -1,7 +1,7 @@
 /* ------- VARIABLES -------- */
 @font-face {
-  font-family: "";
-  src: url(../);
+  font-family: "DenimINK Regular";
+  src: url(../fonts/DenimINK-Regular.otf);
 }
 /* ------- MAIN INFO -------- */
 * {
@@ -11,8 +11,7 @@
 }
 
 html {
-  font-family: "Poppins";
-  font-weight: 300;
+  font-family: "DenimINK Regular";
   color: #fff;
   font-size: 16px;
   text-rendering: optimizeLegibility;
@@ -20,8 +19,7 @@ html {
 }
 
 body {
-  font-family: "Poppins";
-  font-weight: 300;
+  font-family: "DenimINK Regular";
   color: #fff;
   font-size: 16px;
   background-color: rgb(23, 23, 23);
@@ -30,6 +28,14 @@ body {
 /* ------- TITLES, TEXTS -------- */
 .text-black {
   color: black;
+}
+
+.fs-xs {
+  font-size: 13px;
+}
+
+.fs-topbar {
+  font-size: 19px;
 }
 
 /* ------- BACKGROUNDS -------- */
@@ -44,6 +50,10 @@ body {
 /* ------- POSITIONING -------- */
 .rotate-180 {
   transform: rotate(180deg);
+}
+
+.social-icon {
+  transform: translate(50%, -50%);
 }
 
 .z-1 {
@@ -71,28 +81,6 @@ a:hover {
 .grayscale-hover:hover {
   filter: grayscale(0%);
   transition-duration: 0.3s;
-}
-
-.logo-hover {
-  transition-duration: 0.5s;
-}
-.logo-hover rect {
-  transition-duration: 0.5s;
-}
-.logo-hover path {
-  transition-duration: 0.5s;
-}
-.logo-hover:hover {
-  transition-duration: 0.5s;
-}
-.logo-hover:hover rect {
-  fill: transparent;
-  stroke: transparent;
-  transition-duration: 0.5s;
-}
-.logo-hover:hover path {
-  fill: black;
-  transition-duration: 0.5s;
 }
 
 /* ------- SWIPER -------- */
@@ -163,6 +151,17 @@ a:hover {
      object-fit: contain;
 }
 
+.portfolioSwiper .swiper-slide {
+  --bs-aspect-ratio: 126.65%;
+  overflow: hidden;
+}
+
+.portfolioSwiper .swiper-slide img,
+.portfolioSwiper .swiper-slide video {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 /* ------- WRAPPERS -------- */
 .ink-info {
   width: 100%;
@@ -181,25 +180,49 @@ a:hover {
   top: 70px;
 }
 
+.logo-hover {
+  transition-duration: 0.5s;
+}
+.logo-hover rect {
+  transition-duration: 0.5s;
+}
+.logo-hover path {
+  transition-duration: 0.5s;
+}
+
+.logo-link {
+  margin-bottom: -3px;
+  opacity: 0;
+  transition-duration: 0.5s;
+}
+
 .ink-logo {
   width: 100%;
   left: 20px;
   bottom: 5%;
   cursor: pointer;
 }
+.ink-logo:hover .logo-hover {
+  transition-duration: 0.5s;
+}
+.ink-logo:hover .logo-hover rect {
+  fill: transparent;
+  stroke: transparent;
+  transition-duration: 0.5s;
+}
+.ink-logo:hover .logo-hover path {
+  fill: black;
+  transition-duration: 0.5s;
+}
+.ink-logo:hover .logo-link {
+  opacity: 1;
+  transition-duration: 0.5s;
+}
 
 .ink-social {
   width: 100%;
   left: 47%;
   bottom: 5%;
-}
-
-.ink-facebook {
-  width: calc(50% - 0.5rem);
-}
-
-.ink-linkedin {
-  width: calc(50% - 0.5rem);
 }
 
 /* ------- QUERIES -------- */
@@ -216,6 +239,16 @@ a:hover {
   .ink-social {
     display: flex;
     justify-content: space-between;
+  }
+  .w-50-space {
+    width: calc(50% - 0.5rem);
+  }
+  .social-icon svg {
+    width: 20px;
+  }
+  .topbar {
+    width: 106%;
+    transform: translateX(-3%);
   }
 }
 @media (min-width: 768px) {
@@ -274,5 +307,12 @@ a:hover {
   .ink-linkedin {
     width: 100%;
     transform: translate(71%, -150%);
+  }
+  .portfolioSwiper .swiper-slide {
+    --bs-aspect-ratio: 52.75%;
+    overflow: hidden;
+  }
+  .fs-topbar {
+    font-size: 23px;
   }
 }/*# sourceMappingURL=style.css.map */

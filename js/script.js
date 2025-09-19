@@ -2,50 +2,44 @@
 
 $('#year').text(new Date().getFullYear());
 
-// Lightbox
 
-$(document).on('click', '[data-toggle="lightbox"]', function(event) {
-    event.preventDefault()
-    $(this).ekkoLightbox({
-        alwaysShowClose: true,
-    })
-})
+// Swiper.js
 
-// CAROUSEL TIMING
+var swiper = new Swiper(".gallerySwiper", {
+    effect: "fade",
+    // speed: 500,
+    loop: true,
+    autoplay: {
+        delay: 3500,
+        disableOnInteraction: false,
+    },
+});
 
-$(".carousel").carousel({
-    interval: 3500,
-    keyboard: true,
-    pause: "hover",
-  });
+var swiper = new Swiper(".portfolioSwiper", {
+    loop: true,
+    autoplay: {
+        delay: 3500,
+        pauseOnMouseEnter: true,
+    },
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+});
 
-// Simple onclick event
 
-// $("#.classOrId").click(function(){
-//     $(".classOrId").removeClass("class");
-//     $(".classOrId").addClass("class");
-// });
+// Video play on hover 
 
+const video = document.querySelectorAll(".hover-video");
 
-// AOS animations
+video.addEventListener("mouseenter", () => {
+    video.play();
+});
 
-AOS.init({
-  // Global settings:
-  disable: false,
-  startEvent: 'DOMContentLoaded',
-  initClassName: 'aos-init',
-  animatedClassName: 'aos-animate',
-  useClassNames: false,
-  disableMutationObserver: false,
-  debounceDelay: 50,
-  throttleDelay: 99,
-
-  // Can be overridden by `data-aos-*` attributes:
-  offset: 120,
-  delay: 0,
-  duration: 500,
-  easing: 'ease',
-  once: false,
-  mirror: false,
-  anchorPlacement: 'top-bottom',
+video.addEventListener("mouseleave", () => {
+    video.pause(); // no reset, playback stays where it stopped
 });
