@@ -64,6 +64,10 @@ body {
   z-index: 2;
 }
 
+[data-fade-in] {
+  opacity: 0;
+}
+
 /* ------- ACTIONS -------- */
 .pointer {
   cursor: pointer;
@@ -257,7 +261,7 @@ a:hover {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: min(100vw, 177.7777777778vh);
+    width: min(100vw, 180vh);
     height: min(100vh, 56.25vw);
     -o-object-fit: contain;
        object-fit: contain;
@@ -315,4 +319,13 @@ a:hover {
   .fs-topbar {
     font-size: 23px;
   }
-}/*# sourceMappingURL=style.css.map */
+}
+
+@media (min-width: 768px) and (max-aspect-ratio: 5/3) {
+  .fs-topbar {
+    color: black;
+    font-weight: 600;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
