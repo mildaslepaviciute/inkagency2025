@@ -23,7 +23,6 @@
         <!-- FAVICON -->
 
 
-
         <!-- TITLE -->
 
         <title>INK</title>
@@ -32,21 +31,27 @@
 
     <body>
 
+        <style>
+            [data-fade-in] {
+                opacity: 0;
+            }
+        </style>
+
         <section class="bg-grey-dark bg-ink-mob vw-100-md vh-100-md d-flex align-items-center justify-content-center">
             <div class="position-relative w-100 h-100">
-                <video src="video/INK_Animation_WEB_1920x1080_V2.mp4" class="w-100 h-100 object-fit-contain d-none d-md-block" autoplay preload="auto"></video>
+                <video id="bg-video-desktop" src="video/INK_Animation_WEB_1920x1080_V2.mp4" class="w-100 h-100 object-fit-contain d-none d-md-block" muted="true"></video>
                 <div class="ratio-wrapper px-4 pb-md-4 pt-md-3">
                     <div class="topbar position-relative h-100 mb-3">
                         <div class="w-100 d-flex justify-content-between">
-                            <div class="fs-topbar text-uppercase">Integrated</div>
-                            <div class="fs-topbar text-uppercase">Communication</div>
+                            <div class="fs-topbar text-uppercase" data-fade-in data-fade-in-delay="0">Integrated</div>
+                            <div class="fs-topbar text-uppercase" data-fade-in data-fade-in-delay="0.2">Communication</div>
                         </div>
                     </div>
-                    <div class="ink-info position-md-absolute mb-4 mb-md-0">
+                    <div class="ink-info position-md-absolute mb-4 mb-md-0" data-fade-in data-fade-in-delay="0.4">
                         <img src="img/ink-info.png" alt="" class="w-100 d-none d-md-block">
                         <img src="img/ink-info-mob.png" alt="" class="w-100 d-md-none">
                     </div>
-                    <div class="img-gallery position-md-absolute order-3 mb-4 mb-md-0">
+                    <div class="img-gallery position-md-absolute order-3 mb-4 mb-md-0" data-fade-in data-fade-in-delay="0.6">
                         <div class="swiper gallerySwiper">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
@@ -79,23 +84,23 @@
                             </div>
                         </div>
                     </div>
-                    <div class="portfolio-slider position-md-absolute order-2 mb-4 mb-md-0">
+                    <div class="portfolio-slider position-md-absolute order-2 mb-4 mb-md-0" data-fade-in data-fade-in-delay="0.8">
                         <div class="swiper portfolioSwiper grayscale-hover rounded-3 border border-3 border-black overflow-hidden bg-black">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide ratio overflow-hidden">
-                                    <video src="video/MKC TVC 30S.mov" class="w-100 hover-video" muted loop preload="auto"></video>
+                                    <video src="video/MKC TVC 30S.mov" class="w-100 hover-video" muted preload="auto"></video>
                                 </div>
                                 <div class="swiper-slide ratio overflow-hidden">
-                                    <video src="video/MKC TVC 30S.mov" class="w-100 hover-video" muted loop preload="auto"></video>
+                                    <video src="video/MKC TVC 30S.mov" class="w-100 hover-video" muted preload="auto"></video>
                                 </div>
                                 <div class="swiper-slide ratio overflow-hidden">
-                                    <video src="video/MKC TVC 30S.mov" class="w-100 hover-video" muted loop preload="auto"></video>
+                                    <video src="video/MKC TVC 30S.mov" class="w-100 hover-video" muted preload="auto"></video>
                                 </div>
                                 <div class="swiper-slide ratio overflow-hidden">
-                                    <video src="video/MKC TVC 30S.mov" class="w-100 hover-video" muted loop preload="auto"></video>
+                                    <video src="video/MKC TVC 30S.mov" class="w-100 hover-video" muted preload="auto"></video>
                                 </div>
                                 <div class="swiper-slide ratio overflow-hidden">
-                                    <video src="video/MKC TVC 30S.mov" class="w-100 hover-video" muted loop preload="auto"></video>
+                                    <video src="video/MKC TVC 30S.mov" class="w-100 hover-video" muted preload="auto"></video>
                                 </div>
                             </div>
                             <div class="swiper-button-next">
@@ -111,7 +116,7 @@
                             <div class="swiper-pagination"></div>
                         </div>
                     </div>
-                    <a href="mailto:info@inkagency.lt" class="order-5">
+                    <a href="mailto:info@inkagency.lt" class="order-5" data-fade-in data-fade-in-delay="1.2">
                         <div class="ink-logo position-md-absolute mb-4 mb-md-0">
                             <div class="position-relative">
                                 <svg class="logo-hover w-100 h-auto" width="790" height="201" viewBox="0 0 790 201" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -125,8 +130,8 @@
                         </div>
                     </a>
                     <div class="ink-social position-md-absolute order-4 mb-4 mb-md-0">
-                        <a href="" class="w-50-space">
-                            <div class="ink-facebook position-relative grayscale-hover">
+                        <a href="https://www.facebook.com/inkagency.lt" class="w-50-space">
+                            <div class="ink-facebook position-relative grayscale-hover" data-fade-in data-fade-in-delay="1.0">
                                 <div class="overflow-hidden ratio ratio-1x1">
                                     <img src="img/facebook.png" alt="" class="w-100"> 
                                 </div>
@@ -139,8 +144,8 @@
                                 </div>
                             </div>
                         </a>
-                        <a href="" class="w-50-space">
-                            <div class="ink-linkedin position-md-absolute grayscale-hover">
+                        <a href="https://www.linkedin.com/company/uab-ink-agency/posts/" class="w-50-space">
+                            <div class="ink-linkedin position-md-absolute grayscale-hover" data-fade-in data-fade-in-delay="1.2">
                                 <div class="position-relative">
                                     <div class="overflow-hidden ratio ratio-1x1">
                                         <img src="img/linkedin.png" alt="" class="w-100">
@@ -155,13 +160,6 @@
                                 </div>
                             </div>
                         </a>
-                        
-                        <!-- <div class="ink-linkedin position-md-absolute grayscale-hover order-5 rounded-3 border border-3 border-black overflow-hidden bg-black ratio ratio-1x1">
-                            <img src="img/linkedin.png" alt="" class="w-100">
-                        </div>
-                        <div class="position-absolute bottom-0 end-0">
-                            LinkedIn
-                        </div> -->
                     </div>
                 </div>
             </div>
@@ -172,6 +170,7 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
         <script src="js/jquery.waypoints.min.js"></script>
         <script src="js/script.js"></script>
     </body>

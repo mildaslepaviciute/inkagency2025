@@ -1,45 +1,67 @@
-// Get the current year for the copyright 
-
-$('#year').text(new Date().getFullYear());
-
-
-// Swiper.js
-
-var swiper = new Swiper(".gallerySwiper", {
+document.addEventListener("DOMContentLoaded", function () {
+  new Swiper(".gallerySwiper", {
     effect: "fade",
-    // speed: 500,
     loop: true,
     autoplay: {
-        delay: 3500,
-        disableOnInteraction: false,
+      delay: 3500,
+      disableOnInteraction: false,
     },
-});
+  });
 
-var swiper = new Swiper(".portfolioSwiper", {
+  const portfolioSwiper = new Swiper(".portfolioSwiper", {
     loop: true,
-    autoplay: {
-        delay: 3500,
-        pauseOnMouseEnter: true,
-    },
+    autoplay: false,
+    // autoplay: {
+    //     delay: 3500,
+    //     pauseOnMouseEnter: true,
+    // },
     navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
     },
     pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
+      el: ".swiper-pagination",
+      clickable: true,
     },
-});
+  });
 
 
-// Video play on hover 
+  // Video play on hover 
+  const videos = document.querySelectorAll(".hover-video");
 
-const video = document.querySelectorAll(".hover-video");
+  videos.forEach(video => {
+    video.addEventListener("mouseenter", () => {
+      video.play();
+    });
 
-video.addEventListener("mouseenter", () => {
+    video.addEventListener("mouseleave", () => {
+      video.pause();
+    });
+
+    video.addEventListener("ended", () => {
+      portfolioSwiper.slideNext();
+    });
+  });
+
+  const video = document.getElementById("bg-video-desktop");
     video.play();
-});
+    video.onended = function () {
+      init();
+  };
 
-video.addEventListener("mouseleave", () => {
-    video.pause(); // no reset, playback stays where it stopped
+  function init() {
+    const elementsWithFadeIn = document.querySelectorAll('[data-fade-in]');
+
+    elementsWithFadeIn.forEach(element => {
+      const delay = parseFloat(element.getAttribute('data-fade-in-delay')) || 0;
+
+      // Animate in
+      gsap.to(element, {
+        opacity: 1,
+        duration: 0.8,
+        delay: delay,
+        ease: "power2.out"
+      });
+    });
+  }
 });
