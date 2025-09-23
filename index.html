@@ -31,14 +31,24 @@
 
     <body>
 
-        <section class="bg-grey-dark bg-ink-mob vw-100-md vh-100-md d-flex align-items-center justify-content-center">
+        <section class="bg-ink-mob vw-100-md vh-100-md d-flex align-items-center justify-content-center">
             <div class="position-relative w-100 h-100">
                 <video id="bg-video-desktop" src="video/INK_Animation_WEB_1920x1080_V2.mp4" class="w-100 vh-100 object-fit-fill d-none d-md-block" muted="true"></video>
+                 <div class="position-absolute top-0 left-0 w-100 h-100 " style="mix-blend-mode: difference; pointer-events: none;">
+                    <div class="ratio-wrapper px-4 pb-md-4 pt-md-3" style="pointer-events: auto;">
+                        <div class="topbar position-relative h-100 mb-3">
+                            <div class="w-100 d-flex justify-content-between">
+                                <div class="fs-topbar text-uppercase text-white" data-fade-in data-fade-in-delay="0">Integrated</div>
+                                <div class="fs-topbar text-uppercase text-white" data-fade-in data-fade-in-delay="0.2">Communication</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div class="ratio-wrapper px-4 pb-md-4 pt-md-3">
-                    <div class="topbar position-relative h-100 mb-3">
+                    <div class="topbar position-relative h-100 mb-3 d-md-none">
                         <div class="w-100 d-flex justify-content-between">
-                            <div class="fs-topbar text-uppercase" data-fade-in data-fade-in-delay="0">Integrated</div>
-                            <div class="fs-topbar text-uppercase" data-fade-in data-fade-in-delay="0.2">Communication</div>
+                            <div class="fs-topbar text-uppercase">Integrated</div>
+                            <div class="fs-topbar text-uppercase">Communication</div>
                         </div>
                     </div>
                     <div class="ink-info position-md-absolute mb-4 mb-md-0" data-fade-in data-fade-in-delay="0.4">
