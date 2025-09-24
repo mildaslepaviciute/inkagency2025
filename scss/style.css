@@ -196,7 +196,7 @@ a:hover {
 }
 
 .logo-link {
-  margin-bottom: -3px;
+  margin-bottom: -8px;
   opacity: 0;
   transition-duration: 0.5s;
 }
