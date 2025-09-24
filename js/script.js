@@ -67,6 +67,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (video.currentTime >= 2.5) {
       video.removeEventListener('timeupdate', videoTimeCheck);
       init();
+      document.body.classList.remove("overflow-hidden");
     }
   });
 
