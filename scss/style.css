@@ -65,6 +65,7 @@ body {
 
 [data-fade-in] {
   opacity: 0;
+  scale: 1.05;
 }
 
 /* ------- ACTIONS -------- */
@@ -77,11 +78,12 @@ a:hover {
   text-decoration: none;
 }
 
-.grayscale-hover {
+.grayscale-in-view {
   filter: grayscale(100%);
   transition-duration: 0.3s;
 }
-.grayscale-hover:hover {
+
+.grayscale-in-view.in-view {
   filter: grayscale(0%);
   transition-duration: 0.3s;
 }
@@ -205,19 +207,23 @@ a:hover {
   bottom: 5%;
   cursor: pointer;
 }
-.ink-logo:hover .logo-hover {
+.ink-logo:hover .logo-hover,
+.hover-active .logo-hover {
   transition-duration: 0.5s;
 }
-.ink-logo:hover .logo-hover rect {
+.ink-logo:hover .logo-hover rect,
+.hover-active .logo-hover rect {
   fill: transparent;
   stroke: transparent;
   transition-duration: 0.5s;
 }
-.ink-logo:hover .logo-hover path {
+.ink-logo:hover .logo-hover path,
+.hover-active .logo-hover path {
   fill: black;
   transition-duration: 0.5s;
 }
-.ink-logo:hover .logo-link {
+.ink-logo:hover .logo-link,
+.hover-active .logo-link {
   opacity: 1;
   transition-duration: 0.5s;
 }
@@ -230,11 +236,11 @@ a:hover {
 
 /* ------- QUERIES -------- */
 @media (max-width: 767px) {
-  .bg-ink-mob {
+  /* .bg-ink-mob {
     background-image: url(../img/INK\ grain\ mobile\ 1.png);
     background-size: 100% 100%;
     background-attachment: fixed;
-  }
+  } */
   .ratio-wrapper {
     display: flex;
     flex-direction: column;
@@ -309,7 +315,7 @@ a:hover {
   }
   .ink-linkedin {
     width: 100%;
-    transform: translate(71%, -150%);
+    transform: translate(71%, -150%) !important;
   }
   .portfolioSwiper .swiper-slide {
     --bs-aspect-ratio: 52.75%;
@@ -317,6 +323,15 @@ a:hover {
   }
   .fs-topbar {
     font-size: 23px;
+  }
+
+  .grayscale-hover {
+    filter: grayscale(100%);
+    transition-duration: 0.3s;
+  }
+  .grayscale-hover:hover {
+    filter: grayscale(0%);
+    transition-duration: 0.3s;
   }
 }
 

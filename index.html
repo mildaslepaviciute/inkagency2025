@@ -16,7 +16,7 @@
 
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-        <link rel="stylesheet" href="scss/bootstrap.css">
+        <!-- <link rel="stylesheet" href="scss/bootstrap.css"> -->
         <link rel="stylesheet" href="scss/style.css">
         <link rel="image_src" href="img/link_img.jpg">
 
@@ -33,8 +33,8 @@
 
         <section class="bg-ink-mob vw-100-md vh-100-md d-flex align-items-center justify-content-center">
             <div class="position-relative w-100 h-100">
-                <video id="bg-video-desktop" src="video/INK_Animation_WEB_1920x1080_V2.mp4" class="w-100 vh-100 object-fit-fill d-none d-md-block" muted="true"></video>
-                 <div class="position-absolute top-0 left-0 w-100 h-100 " style="mix-blend-mode: difference; pointer-events: none;">
+                <video id="bg-video-desktop" src="video/INK_bg.mp4" class="w-100 vh-100 object-fit-fill position-fixed" muted playsinline preload></video>
+                 <div class=" top-0 left-0 w-100 h-100 " style="mix-blend-mode: difference; pointer-events: none;">
                     <div class="ratio-wrapper px-4 pb-md-4 pt-md-3" style="pointer-events: auto;">
                         <div class="topbar position-relative h-100 mb-3">
                             <div class="w-100 d-flex justify-content-between">
@@ -45,12 +45,6 @@
                     </div>
                 </div>
                 <div class="ratio-wrapper px-4 pb-md-4 pt-md-3">
-                    <div class="topbar position-relative h-100 mb-3 d-md-none">
-                        <div class="w-100 d-flex justify-content-between">
-                            <div class="fs-topbar text-uppercase">Integrated</div>
-                            <div class="fs-topbar text-uppercase">Communication</div>
-                        </div>
-                    </div>
                     <div class="ink-info position-md-absolute mb-4 mb-md-0" data-fade-in data-fade-in-delay="0.4">
                         <img src="img/ink-info.png" alt="" class="w-100 d-none d-md-block">
                         <img src="img/ink-info-mob.png" alt="" class="w-100 d-md-none">
@@ -59,52 +53,50 @@
                         <div class="swiper gallerySwiper">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
-                                    <img src="img/img-gallery/INK-tote.png" alt="" class="w-100">
+                                    <img src="img/img-gallery/INK_gallery_1.webp" alt="" class="w-100">
                                 </div>
                                 <div class="swiper-slide">
-                                    <img src="img/img-gallery/INK tattoo 1.png" alt="" class="w-100">
+                                    <img src="img/img-gallery/INK_gallery_2.webp" alt="" class="w-100">
                                 </div>
                                 <div class="swiper-slide">
-                                    <img src="img/img-gallery/INK_hoodie_v2.png" alt="" class="w-100">
+                                    <img src="img/img-gallery/INK_gallery_3.webp" alt="" class="w-100">
                                 </div>
                                 <div class="swiper-slide">
-                                    <img src="img/img-gallery/INK_label_v2.png" alt="" class="w-100">
+                                    <img src="img/img-gallery/INK_gallery_4.webp" alt="" class="w-100">
                                 </div>
                                 <div class="swiper-slide">
-                                    <img src="img/img-gallery/ink wrap 2.png" alt="" class="w-100">
+                                    <img src="img/img-gallery/INK_gallery_5.webp" alt="" class="w-100">
                                 </div>
                                 <div class="swiper-slide">
-                                    <img src="img/img-gallery/image 8.png" alt="" class="w-100">
+                                    <img src="img/img-gallery/INK_gallery_6.webp" alt="" class="w-100">
                                 </div>
                                 <div class="swiper-slide">
-                                    <img src="img/img-gallery/INK_notebook_3.png" alt="" class="w-100">
+                                    <img src="img/img-gallery/INK_gallery_7.webp" alt="" class="w-100">
                                 </div>
                                 <div class="swiper-slide">
-                                    <img src="img/img-gallery/ink wrap 1.png" alt="" class="w-100">
-                                </div>
-                                <div class="swiper-slide">
-                                    <img src="img/img-gallery/INK_notebook_4.png" alt="" class="w-100">
+                                    <img src="img/img-gallery/INK_gallery_8.webp" alt="" class="w-100">
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="portfolio-slider position-md-absolute order-2 mb-4 mb-md-0" data-fade-in data-fade-in-delay="0.8">
-                        <div class="swiper portfolioSwiper grayscale-hover rounded-3 border border-3 border-black overflow-hidden bg-black">
+                        <div class="swiper portfolioSwiper rounded-3 border border-3 border-black overflow-hidden bg-black">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide ratio overflow-hidden">
-                                    <video src="video/MKC TVC 30S.mov" class="w-100 hover-video" muted preload="auto"></video>
+                                    <video src="video/portfolio/INK_portfolio_1.mp4" class="w-100 grayscale-hover hover-video d-none d-md-block" muted preload="auto"></video>
+                                    <video src="video/portfolio/INK_portfolio_1_mob.mp4" class="w-100 grayscale-in-view d-md-none" data-play-in-view muted preload="auto"></video>
                                 </div>
                                 <div class="swiper-slide ratio overflow-hidden">
-                                    <video src="video/MKC TVC 30S.mov" class="w-100 hover-video" muted preload="auto"></video>
+                                    <video src="video/portfolio/INK_portfolio_2.mp4" class="w-100 grayscale-hover hover-video d-none d-md-block" muted></video>
+                                    <video src="video/portfolio/INK_portfolio_2_mob.mp4" class="w-100 grayscale-in-view d-md-none" data-play-in-view muted></video>
                                 </div>
                                 <div class="swiper-slide ratio overflow-hidden">
-                                    <video src="video/MKC TVC 30S.mov" class="w-100 hover-video" muted preload="auto"></video>
+                                    <video src="video/portfolio/INK_portfolio_3.mp4" class="w-100 grayscale-hover hover-video d-none d-md-block" muted></video>
+                                    <video src="video/portfolio/INK_portfolio_3_mob.mp4" class="w-100 grayscale-in-view d-md-none" data-play-in-view muted></video>
                                 </div>
                                 <div class="swiper-slide ratio overflow-hidden">
-                                    <video src="video/MKC TVC 30S.mov" class="w-100 hover-video" muted preload="auto"></video>
-                                </div>
-                                <div class="swiper-slide ratio overflow-hidden">
-                                    <video src="video/MKC TVC 30S.mov" class="w-100 hover-video" muted preload="auto"></video>
+                                    <video src="video/portfolio/INK_portfolio_4.mp4" class="w-100 grayscale-hover hover-video d-none d-md-block" muted></video>
+                                    <video src="video/portfolio/INK_portfolio_4_mob.mp4" class="w-100 grayscale-in-view d-md-none" data-play-in-view muted></video>
                                 </div>
                             </div>
                             <div class="swiper-button-next">
@@ -121,7 +113,7 @@
                         </div>
                     </div>
                     <a href="mailto:info@inkagency.lt" class="order-5" data-fade-in data-fade-in-delay="1.2">
-                        <div class="ink-logo position-md-absolute mb-4 mb-md-0">
+                        <div id="ink-logo" class="ink-logo position-md-absolute mb-4 mb-md-0">
                             <div class="position-relative">
                                 <svg class="logo-hover w-100 h-auto" width="790" height="201" viewBox="0 0 790 201" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <rect x="1.5" y="1.5" width="787" height="198" rx="9.5" fill="black" stroke="black" stroke-width="3"/>
@@ -151,8 +143,8 @@
                         <a href="https://www.linkedin.com/company/uab-ink-agency/posts/" class="w-50-space">
                             <div class="ink-linkedin position-md-absolute grayscale-hover" data-fade-in data-fade-in-delay="1.2">
                                 <div class="position-relative">
-                                    <div class="overflow-hidden ratio ratio-1x1">
-                                        <img src="img/linkedin.png" alt="" class="w-100">
+                                    <div class="overflow-hidden ratio ratio-1x1 rounded-3 border border-3 border-black">
+                                        <video id="linkedin-video" src="video/ink_linkedin.mp4" class="w-100" autoplay muted playsinline loop></video>
                                     </div>
                                     <div class="position-absolute end-0 text-black fs-xs me-3 me-md-4">LinkedIn</div>
                                     <div class="social-icon position-absolute end-0">
@@ -172,10 +164,9 @@
         <!-- SCRIPTS -->
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-        <script src="js/jquery.waypoints.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
         <script src="js/script.js"></script>
     </body>
 </html>
