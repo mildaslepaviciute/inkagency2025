@@ -5,6 +5,9 @@ document.addEventListener("DOMContentLoaded", function () {
   if (isMobile) {
     const linkedinVideo = document.getElementById("linkedin-video");
     linkedinVideo.play();    
+
+    const facebookVideo = document.getElementById("facebook-video");
+    facebookVideo.play();
   }
 
   new Swiper(".gallerySwiper", {
@@ -61,15 +64,28 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
   const video = document.getElementById("bg-video-desktop");
-  video.play();
+  const videoMobile = document.getElementById("bg-video-mobile");
 
-  video.addEventListener('timeupdate', function videoTimeCheck() {
-    if (video.currentTime >= 2.5) {
-      video.removeEventListener('timeupdate', videoTimeCheck);
+  if (isMobile) {
+    videoMobile.play();
+  } else {
+    video.play();
+  }
+
+  function handleVideoTimeCheck() {
+    const currentVideo = isMobile ? videoMobile : video;
+    if (currentVideo.currentTime >= 2.5) {
+      currentVideo.removeEventListener('timeupdate', handleVideoTimeCheck);
       init();
       document.body.classList.remove("overflow-hidden");
     }
-  });
+  }
+
+  if (isMobile) {
+    videoMobile.addEventListener('timeupdate', handleVideoTimeCheck);
+  } else {
+    video.addEventListener('timeupdate', handleVideoTimeCheck);
+  }
 
   function init() {
 
