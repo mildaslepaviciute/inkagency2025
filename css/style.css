@@ -41,6 +41,10 @@ body {
   font-size: 19px;
 }
 
+.mix-blend-mode-difference {
+  mix-blend-mode: difference;
+}
+
 /* ------- BACKGROUNDS -------- */
 .bg-white {
   background-color: white;
