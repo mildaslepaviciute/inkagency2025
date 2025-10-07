@@ -37,6 +37,11 @@ body {
   font-size: 13px;
 }
 
+.fs-xxs {
+  font-size: 4vw;
+  line-height: 1.2;
+}
+
 .fs-topbar {
   font-size: 19px;
 }
@@ -178,19 +183,20 @@ a:hover {
 /* ------- WRAPPERS -------- */
 .ink-info {
   width: 100%;
-  top: 70px;
+  top: 6%;
+  left: 20px;
 }
 
 .img-gallery {
   width: 100%;
   left: 35%;
-  top: 70px;
+  top: 6%;
 }
 
 .portfolio-slider {
   width: 100%;
   left: 58.4%;
-  top: 70px;
+  top: 6%;
 }
 
 .logo-hover {
@@ -212,7 +218,7 @@ a:hover {
 .ink-logo {
   width: 100%;
   left: 20px;
-  bottom: 5%;
+  bottom: 6%;
   cursor: pointer;
 }
 .ink-logo:hover .logo-hover,
@@ -239,7 +245,14 @@ a:hover {
 .ink-social {
   width: 100%;
   left: 47%;
-  bottom: 5%;
+  bottom: 6%;
+}
+
+.ink-contacts {
+  width: 100%;
+  right: 20px;
+  bottom: 6%;
+  cursor: pointer;
 }
 
 /* ------- QUERIES -------- */
@@ -318,6 +331,19 @@ a:hover {
     width: 16%;
     left: 47%;
   }
+  .ink-contacts {
+    width: 18%;
+    left: 78%;
+  }
+
+  .ink-contacts-text {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  .ink-contacts:hover .ink-contacts-text {
+    opacity: 1;
+  }
+
   .ink-facebook {
     width: 100%;
   }
@@ -341,12 +367,30 @@ a:hover {
     filter: grayscale(0%);
     transition-duration: 0.3s;
   }
+
+  .fs-xxs {
+    font-size: 0.75vw;
+    line-height: 1.2;
+  }
 }
 
 @media (min-width: 768px) and (max-aspect-ratio: 5/3) {
   .fs-topbar {
     color: black;
     font-weight: 600;
+  }
+}
+
+
+@media (min-width: 1600px) {
+  .fs-xxs {
+    font-size: 0.7vw;
+  }
+}
+
+@media (min-width: 2600px) {
+  .fs-xxs {
+     font-size: 0.55vw;
   }
 }
 

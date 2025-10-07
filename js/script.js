@@ -163,29 +163,12 @@ document.addEventListener("DOMContentLoaded", function () {
         });
       });
     }
-
-    // add hover effect to logo if its fully scrolled in view using scrolltrigger
-    function initLogoHoverEffect() {
-      const logo = document.getElementById("ink-logo");
-      ScrollTrigger.create({
-        trigger: "#ink-logo",
-        start: "bottom bottom",
-        end: "top top",
-        onEnter: () => {
-          logo.classList.add('hover-active');
-        },
-        onLeaveBack: () => {
-          logo.classList.remove('hover-active');
-        },
-      });
-    }
     
     gsap.registerPlugin(ScrollTrigger);
     initFadeInElements();
     initHoverVideos();
     if (isMobile) {
       initPlayInViewVideos();
-      initLogoHoverEffect()
     }
   }
 });
