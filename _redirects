@@ -3,4 +3,4 @@
 /fonts/*  /fonts/:splat  200
 /img/*    /img/:splat    200
 /video/*  /video/:splat  200
-/*        /               301
+/:path    /               301
