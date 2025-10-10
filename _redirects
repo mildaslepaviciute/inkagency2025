@@ -3,4 +3,7 @@
 /fonts/*  /fonts/:splat  200
 /img/*    /img/:splat    200
 /video/*  /video/:splat  200
-/:path    /               301
+
+# redirect everything except the root
+/:path    /              301
+/**       /              301
