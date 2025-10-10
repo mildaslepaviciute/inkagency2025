@@ -4,11 +4,11 @@
 /img/*     /img/:splat     200
 /video/*   /video/:splat   200
 
-/:page             /    301
-/:page/            /    301
-/:lang             /    301
-/:lang/            /    301
-/:lang/:splat      /    301
-/:lang/:splat/     /    301
-/:lang/:splat/:deep*    /    301
-/:lang/:splat/:deep*/   /    301
+/:first             /    301
+/:first/            /    301
+/:first/:second      /    301
+/:first/:second/     /    301
+/:first/:second/:third    /    301
+/:first/:second/:third/   /    301
+/:first/:second/:third/:fourth    /    301
+/:first/:second/:third/:fourth/   /    301
