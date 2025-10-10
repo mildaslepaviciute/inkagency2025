@@ -1,9 +1,8 @@
-/css/*    /css/:splat    200
-/js/*     /js/:splat     200
-/fonts/*  /fonts/:splat  200
-/img/*    /img/:splat    200
-/video/*  /video/:splat  200
+/                /index.html     200  
+/css/*           /css/:splat     200
+/js/*            /js/:splat      200
+/fonts/*         /fonts/:splat   200
+/img/*           /img/:splat     200
+/video/*         /video/:splat   200
 
-# redirect everything except the root
-/:path    /              301
-/**       /              301
+/*               /               301   # catch-all: redirects anything (any depth) to "/"
