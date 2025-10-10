@@ -1,8 +1,8 @@
-/                /index.html     200  
-/css/*           /css/:splat     200
-/js/*            /js/:splat      200
-/fonts/*         /fonts/:splat   200
-/img/*           /img/:splat     200
-/video/*         /video/:splat   200
+/css/*     /css/:splat     200
+/js/*      /js/:splat      200
+/fonts/*   /fonts/:splat   200
+/img/*     /img/:splat     200
+/video/*   /video/:splat   200
 
-/*               /               301   # catch-all: redirects anything (any depth) to "/"
+/:page           /    301
+/:lang/:splat    /    301
